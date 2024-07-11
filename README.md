@@ -27,3 +27,9 @@ CREATE TABLE Books (
    FOREIGN KEY (BookID) REFERENCES Books(BookID),
    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
  );
+ 
+INSERT INTO Books (Title, Author, Genre, PublishedYear, AvailableCopies) 
+VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 1925, 5);
+
+INSERT INTO Members (FirstName, LastName, Email, PhoneNumber, MembershipDate) 
+VALUES ('John', 'Doe', 'johndoe@example.com', '123-456-7890', '2024-07-10');
