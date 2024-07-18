@@ -33,3 +33,32 @@ VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 1925, 5);
 
 INSERT INTO Members (FirstName, LastName, Email, PhoneNumber, MembershipDate) 
 VALUES ('John', 'Doe', 'johndoe@example.com', '123-456-7890', '2024-07-10');
+
+INSERT INTO Transactions (BookID, MemberID, BorrowDate, ReturnDate) 
+VALUES (1, 1, '2024-07-10', NULL);
+
+UPDATE Books 
+SET AvailableCopies = AvailableCopies - 1 
+WHERE BookID = 1;
+
+UPDATE Members 
+SET Email = 'john.doe@newemail.com' 
+WHERE MemberID = 1;
+
+DELETE FROM Books 
+WHERE BookID = 1;
+
+DELETE FROM Members 
+WHERE MemberID = 1;
+
+SELECT * FROM Books;
+
+SELECT * FROM Members;
+
+SELECT * FROM Transactions;
+
+SELECT Books.Title, Books.Author, Transactions.BorrowDate 
+FROM Transactions 
+JOIN Books ON Transactions.BookID = Books.BookID 
+WHERE Transactions.MemberID = 1;
+
