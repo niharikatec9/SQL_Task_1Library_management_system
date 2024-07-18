@@ -1,5 +1,5 @@
 # SQL_Task_1Library_management_system
-# SQL_Task_students and database management
+# SQL_Task_2students and database management
 TASK ONE: LIBRARY MANAGEMENT SYSTEM
 
 Create a database for managing a library's book inventory, members, and
