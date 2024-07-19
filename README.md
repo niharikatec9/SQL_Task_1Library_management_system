@@ -34,7 +34,8 @@ CREATE TABLE Books (
    last_name VARCHAR(100) NOT NULL,
    Email VARCHAR(255) UNIQUE NOT NULL,
    Phone_number VARCHAR(20),
-   Member_shipdate DATE NOT NULL
+   Member_shipdate DATE NOT NULL,
+   jion_date Date Not Null
  );
  
  CREATE TABLE Transactions (
@@ -79,56 +80,5 @@ SELECT Books.Title, Books.Author, Transactions.BorrowDate
 FROM Transactions 
 JOIN Books ON Transactions.BookID = Books.BookID 
 WHERE Transactions.MemberID = 1;
-
-
-CREATE TABLE Students (
-    StudentID INT PRIMARY KEY AUTO_INCREMENT,
-    FirstName VARCHAR(100) NOT NULL,
-    LastName VARCHAR(100) NOT NULL,
-    DateOfBirth DATE NOT NULL,
-    Email VARCHAR(255) UNIQUE NOT NULL,
-    PhoneNumber VARCHAR(20),
-    EnrollmentDate DATE NOT NULL
-);
-
-CREATE TABLE Courses (
-    CourseID INT PRIMARY KEY AUTO_INCREMENT,
-    CourseName VARCHAR(255) NOT NULL,
-    Credits INT NOT NULL
-);
-
-CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY AUTO_INCREMENT,
-    StudentID INT,
-    CourseID INT,
-    Grade CHAR(2),
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
-);
-
-INSERT INTO Students (FirstName, LastName, DateOfBirth, Email, PhoneNumber, EnrollmentDate) 
-VALUES ('Jane', 'Smith', '2000-04-15', 'janesmith@example.com', '987-654-3210', '2024-07-10');
-
-INSERT INTO Courses (CourseName, Credits) 
-VALUES ('Database Systems', 3);
-
-INSERT INTO Enrollments (StudentID, CourseID, Grade) 
-VALUES (1, 1, 'A');
-
-UPDATE Students 
-SET Email = 'jane.smith@newemail.com' 
-WHERE StudentID = 1;
-
-UPDATE Courses 
-SET Credits = 4 
-WHERE CourseID = 1;
-
-DELETE FROM Students 
-WHERE StudentID = 1;
-
-DELETE FROM Courses 
-WHERE CourseID = 1;
-
-SELECT * FROM Students;
 
 
