@@ -1,23 +1,11 @@
 # SQL_Task_1Library_management_system
-# SQL_Task_2students and database management
+
 TASK ONE: LIBRARY MANAGEMENT SYSTEM
 
 Create a database for managing a library's book inventory, members, and
 borrow/return transactions. This project helps you learn basic SQL commands
 and database design. Design tables for books, members, and transactions.
 Write SQL queries to insert, update, delete, and retrieve data.
-
-TASK TWO: STUDENT DATABASE MANAGEMENT
-
-Create a database to manage student records, including
-personal details, courses, and grades. This project helps you
-practice creating and managing relational databases. Design
-tables for students, courses, and enrollments. Write SQL
-queries to manage student records. Implement joins to
-combine data from multiple tableS.
-
-STUDENT DATABASE MANAGEMENT
-
 
 CREATE TABLE Books (
   BookID INT PRIMARY KEY ,
